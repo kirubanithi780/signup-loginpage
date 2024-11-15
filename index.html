@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jsmain task</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+<div class="form-container">
+    <h2 id="formTitle">Signup</h2>
+    
+    
+    <form id="signupForm" onsubmit="return validateSignupForm()">
+        <input type="text" id="signupUsername" name="username" placeholder="Username" required>
+        <div class="error" id="signupUsernameError"></div>
+
+        <input type="email" id="signupEmail" name="email" placeholder="Email" required>
+        <div class="error" id="signupEmailError"></div>
+
+        <input type="password" id="signupPassword" name="password" placeholder="Password" required>
+        <div class="error" id="signupPasswordError"></div>
+
+        <input type="password" id="signupConfirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+        <div class="error" id="signupConfirmPasswordError"></div>
+
+        <button type="submit">Signup</button>
+    </form>
+
+
+    <form id="loginForm" class="hidden" onsubmit="return validateLoginForm()">
+        <input type="email" id="loginEmail" name="loginEmail" placeholder="Email" required>
+        <div class="error" id="loginEmailError"></div>
+
+        <input type="password" id="loginPassword" name="loginPassword" placeholder="Password" required>
+        <div class="error" id="loginPasswordError"></div>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <div class="form-toggle">
+        <p id="toggleMessage">
+            Don't have an account? <a href="javascript:void(0);" onclick="toggleForm()">Signup</a>
+        </p>
+    </div>
+</div>
+
+<script src="script.js"></script> 
+</body>
+</html>
